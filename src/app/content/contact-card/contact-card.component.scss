@@ -1,0 +1,151 @@
+$card-padding: 0.9375rem;
+
+:host {
+  .contact-card {
+
+    &__container {
+      position: relative;
+      background-color: white;
+      padding: $card-padding;
+      box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+
+      &:hover {
+
+        height: 80%;
+
+        .contact-card__information {
+          bottom: 1.875rem;
+          max-height: 40%;
+        }
+
+        .contact-card__additional-information {
+          padding-top: 0.625rem;
+          display: block;
+        }
+
+        .contact-card__profile-image {
+          clip-path: inset(0% 0% 40% 0%);
+        }
+
+        .contact-card__icon {
+          top: 45%;
+        }
+      }
+    }
+
+    &__images {
+      position: relative;
+      margin-bottom: 60%;
+    }
+
+    &__profile-image {
+      position: relative;
+      height: auto;
+      width: 100%;
+      clip-path: inset(0% 0% 0% 0%);
+      transition: 0.5s;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 83%;
+      left: 3%;
+      width: 25%;
+      height: 25%;
+      border-radius: 1.875rem;
+      transition: 0.5s;
+    }
+
+    &__information {
+      position: absolute;
+      bottom: 1rem;
+      padding-right: $card-padding;
+    }
+
+    &__name {
+      font-weight: 550;
+    }
+
+    &__description-text {
+      word-break: break-word;
+      color: #6b6b6b;
+    }
+
+    &__additional-information {
+      display: none;
+    }
+  }
+
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .contact-card__container {
+      height: 70%;
+    }
+
+    .contact-card__images {
+      margin-bottom: 100%;
+    }
+
+    .contact-card__information {
+      font-size: 2vw;
+      line-height: 140%;
+    }
+    .contact-card__name {
+      font-size: 2.2vw;
+    }
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .contact-card__container {
+      height: 85%;
+    }
+
+    .contact-card__information {
+      font-size: 1.6vw;
+      line-height: 140%;
+    }
+    .contact-card__name {
+      font-size: 1.8vw;
+    }
+  }
+
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .contact-card__information {
+      font-size: 1.3vw;
+      line-height: 140%;
+    }
+    .contact-card__name {
+      font-size: 1.5vw;
+    }
+  }
+
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+
+    .contact-card__information {
+      font-size: 1.1vw;
+      line-height: 140%;
+    }
+    .contact-card__name {
+      font-size: 1.3vw;
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .contact-card__information {
+      font-size: 0.8vw;
+    }
+
+    .contact-card__name {
+      font-size: 1vw;
+    }
+  }
+
+}

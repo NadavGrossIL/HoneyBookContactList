@@ -1,0 +1,12 @@
+<div class="content__container">
+  <ng-container *ngIf="contacts; else loading">
+      <ng-container *ngFor="let contact of contacts; trackBy: trackByFunction">
+        <ng-container *ngIf="isFoundOnSearchString(contact)">
+          <app-contact-card [contact]="contact"></app-contact-card>
+        </ng-container>
+      </ng-container>
+  </ng-container>
+  <ng-template #loading>
+    <mat-spinner></mat-spinner>
+  </ng-template>
+</div>

@@ -1,0 +1,89 @@
+@import "../../variables.scss";
+
+:host {
+  .header {
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      height: 3.125rem;
+      background-color: white;
+      padding: 0.625rem 6%;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      padding-top: 0.6rem;
+    }
+
+    &__searchbar-container {
+      position: relative;
+    }
+
+    &__search-icon {
+      position: absolute;
+      height: 1rem;
+      width: 1rem;
+      top: 24%;
+      left: 92%;
+    }
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .header__search-icon{
+      left: 80%;
+    }
+  }
+}
+
+input[type=text] {
+  padding: 0.75rem 1.25rem;
+  border: 0.0625rem solid #cccccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  input[type=text] {
+    width: 9rem;
+  }
+
+  .header__search-icon{
+    left: 8%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  input[type=text] {
+    width: 18rem;
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  input[type=text] {
+    width: 22rem;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  input[type=text] {
+    width: 26rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  input[type=text] {
+    width: 30rem;
+  }
+}
+

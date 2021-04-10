@@ -1,0 +1,2 @@
+<app-header (onSearchBarTextChange)="updateNameSearchString($event)"></app-header>
+<app-content [contacts]="contacts$ | async" [nameSearchString]="nameSearchString"></app-content>

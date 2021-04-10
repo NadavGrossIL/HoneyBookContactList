@@ -1,0 +1,54 @@
+@import "../../variables.scss";
+
+:host {
+  .content {
+    &__container {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-auto-rows: min-content;
+      grid-column-gap: 0.3125rem;
+      justify-content: space-evenly;
+      padding: 4.375rem;
+      height: 120%;
+    }
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .content__container {
+      grid-template-columns: 33% 33% 33%;
+      grid-row-gap: 0;
+      padding: 2rem;
+    }
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .content__container {
+      grid-template-columns: 33% 33% 33%;
+    }
+  }
+
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .content__container {
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+  }
+
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .content__container {
+      grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .content__container {
+      grid-template-columns: 14% 14% 14% 14% 14% 14%;
+    }
+  }
+}

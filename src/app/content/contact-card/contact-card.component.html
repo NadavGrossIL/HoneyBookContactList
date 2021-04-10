@@ -1,0 +1,16 @@
+<div class="contact-card__container">
+  <div class="contact-card__images">
+    <img src="{{contact?.profile_image}}" class="contact-card__profile-image">
+    <img src="{{contact?.icon}}" class="contact-card__icon">
+  </div>
+  <div class="contact-card__information">
+    <div class="contact-card__basic-information">
+      <div class="contact-card__name">{{contact?.name}}</div>
+      <div class="contact-card__description-text">{{getJobDescription(contact)}}</div>
+    </div>
+    <div class="contact-card__additional-information">
+      <div *ngIf="contact?.phone" class="contact-card__description-text">Phone Number {{contact?.phone}}</div>
+      <a href="mailto:{{contact?.email}}" class="contact-card__description-text">{{contact?.email}}</a>
+    </div>
+  </div>
+</div>
