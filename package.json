@@ -8,10 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --aot -prod"
+    "heroku-postbuild": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "^0.1102.8",
     "@angular/animations": "~11.2.0",
     "@angular/cdk": "^11.2.7",
     "@angular/cli": "^11.2.8",
@@ -19,7 +20,6 @@
     "@angular/compiler": "~11.2.0",
     "@angular/compiler-cli": "^11.2.9",
     "@angular/core": "~11.2.0",
-    "@angular-devkit/build-angular": "^0.1102.8",
     "@angular/forms": "~11.2.0",
     "@angular/material": "^11.2.7",
     "@angular/platform-browser": "~11.2.0",
